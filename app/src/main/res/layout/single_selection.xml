@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/answer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/login_edit_padding"
+    >
+    <RadioButton
+        android:id="@+id/optionA"
+        android:text="A选项"
+        style="@style/radio_exam"
+        />
+    <RadioButton
+        android:id="@+id/optionB"
+        android:text="B选项"
+        style="@style/radio_exam"
+        />
+    <RadioButton
+        android:id="@+id/optionC"
+        android:text="C选项"
+        style="@style/radio_exam"
+        />
+    <RadioButton
+        android:id="@+id/optionD"
+        android:text="D选项"
+        style="@style/radio_exam"
+        />
+</RadioGroup>

@@ -1,0 +1,34 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="dot_margin_buttom">40dip</dimen>
+    <dimen name="login_margin">35dip</dimen>
+    <dimen name="set_password_layout_margin">@dimen/activity_horizontal_margin</dimen>
+    <dimen name="rightly_margin_buttom">60dip</dimen>
+    <dimen name="top_margin_text">3dp</dimen>
+    <dimen name="padding_image">5dp</dimen>
+    <dimen name="login_edit_padding">8dp</dimen>
+    <dimen name="btn_login_padding">10dp</dimen>
+    <dimen name="title_bar_height">44.0dip</dimen>
+    <dimen name="time_now_width">42dip</dimen>
+    <dimen name="time_line_margin_left">34dp</dimen>
+    <dimen name="line">55dp</dimen>
+    <dimen name="text_size_16">16.0dip</dimen>
+    <dimen name="text_size_20">20sp</dimen>
+    <dimen name="text_size_14">14.0sp</dimen>
+    <dimen name="text_size_30">30sp</dimen>
+    <dimen name="text_size_25">25sp</dimen>
+    <dimen name="start_height">12dip</dimen>
+    <dimen name="time_index_margin">17dp</dimen>
+    <dimen name="player_height">200dp</dimen>
+    <dimen name="img_height">160dp</dimen>
+    <dimen name="button_emoj_size">@dimen/dot_margin_buttom</dimen>
+    <dimen name="btn_sendReply">70dip</dimen>
+    <dimen name="stork_width">1dip</dimen>
+    <dimen name="exam_button_width">250dp</dimen>
+    <dimen name="exam_button_height">80dp</dimen>
+    <dimen name="text_size_12">12sp</dimen>
+    <dimen name="content_margin">32dip</dimen>
+    <dimen name="btn_small">@dimen/content_margin</dimen>
+</resources>

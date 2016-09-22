@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.smartlab.drivetrain.view.HandyTextView
+            android:id="@+id/pay_first_text"
+            style="@style/pay_item_text"
+            />
+        <Button
+            android:id="@+id/pay_first"
+            style="@style/pay_item_btn"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.smartlab.drivetrain.view.HandyTextView
+            android:id="@+id/pay_two_text"
+            style="@style/pay_item_text"
+            />
+        <Button
+            android:id="@+id/pay_two"
+            style="@style/pay_item_btn"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.smartlab.drivetrain.view.HandyTextView
+            android:id="@+id/pay_three_text"
+            style="@style/pay_item_text"
+            />
+        <Button
+            android:id="@+id/pay_three"
+            style="@style/pay_item_btn"/>
+    </RelativeLayout>
+</LinearLayout>

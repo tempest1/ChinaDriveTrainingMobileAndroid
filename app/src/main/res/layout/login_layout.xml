@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- -->
+    <include layout="@layout/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/login_margin"
+        android:id="@+id/linearLayout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/WelCome"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            />
+        <com.smartlab.drivetrain.view.MyAutocompleteTextView
+            android:id="@+id/userName"
+            android:background="@drawable/login_press_or_normal"
+            style="@style/login_style"
+            android:hint="@string/phone"
+            />
+        <com.smartlab.drivetrain.view.MyAutocompleteTextView
+            android:id="@+id/passWord"
+            android:password="true"
+            android:background="@drawable/login_press_or_normal"
+            style="@style/login_style"
+            android:hint="@string/password"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin">
+            <LinearLayout
+                android:id="@+id/log_reg_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <Button
+                    android:id="@+id/btn_Login"
+                    android:text="@string/Login"
+                    android:enabled="false"
+                    android:background="@drawable/btn_bg_loggin"
+                    android:textColor="@color/black"
+                    style="@style/btn_default"
+                     />
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/to_regists"
+                    android:text="@string/register"
+                    android:layout_marginLeft="@dimen/login_margin"
+                    android:background="@drawable/btn_bg_green"
+                    style="@style/btn_default" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/to_regist"
+                android:text="@string/register"
+
+                android:layout_below="@+id/log_reg_layout"
+
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:layout_width="wrap_content"
+                android:background="@null"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/to_forget"
+                android:text="@string/forgot"
+
+
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@null"
+                android:layout_below="@+id/log_reg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/btn_default" />
+            <CheckBox
+                android:visibility="gone"
+                android:id="@+id/remember"
+                android:layout_below="@+id/log_reg_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:background="@mipmap/weixin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weixi"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+
+</RelativeLayout>

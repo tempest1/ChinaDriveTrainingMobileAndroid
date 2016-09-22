@@ -1,0 +1,279 @@
+package com.smartlab.drivetrain.map;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.mapapi.map.BaiduMap;
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.InfoWindow;
+import com.baidu.mapapi.map.MapPoi;
+import com.baidu.mapapi.map.MapStatus;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
+import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.Marker;
+import com.baidu.mapapi.map.MarkerOptions;
+import com.baidu.mapapi.map.MyLocationConfiguration;
+import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.map.OverlayOptions;
+import com.baidu.mapapi.model.LatLng;
+import com.smartlab.drivetrain.data.Coach;
+import com.smartlab.drivetrain.license.MainApplication;
+import com.smartlab.drivetrain.license.R;
+import com.smartlab.drivetrain.model.CoachBrief;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by smartlab on 15/9/26.
+ */
+public class Coach_location extends Activity implements View.OnClickListener{
+
+    private MapView mMapView;
+    private LocationClient mLocationClient;
+    private MyLocationListener myLocationListener;
+    private BDLocation location;
+    private BaiduMap baiduMap;
+    private boolean isFirstIn = true;
+    private List<Marker> markerList = new ArrayList<>();
+    private InfoWindow mInfoWindow;
+    //周围热点
+    private BitmapDescriptor markerpoi = BitmapDescriptorFactory
+            .fromResource(R.mipmap.jiaolian_marker);
+    //周围热点
+    private BitmapDescriptor markers = BitmapDescriptorFactory
+            .fromResource(R.mipmap.icon_focus_mark);
+    //长按地图事件监听
+    private BaiduMap.OnMapLongClickListener longClick = new BaiduMap.OnMapLongClickListener() {
+        @Override
+        public void onMapLongClick(LatLng latLng) {
+            //经度30.362294纬度112.198708
+
+            Log.e("Marker latutide", "经度" + latLng.longitude + "纬度" + latLng.latitude);
+        }
+    };
+    // 点击覆盖物时间监听
+    private BaiduMap.OnMarkerClickListener markerClick = new BaiduMap.OnMarkerClickListener() {
+        @Override
+        public boolean onMarkerClick(Marker marker) {
+            Bundle bundle = marker.getExtraInfo();
+            CoachBrief info = (CoachBrief) bundle.getSerializable("info");
+            LatLng lat = new LatLng(info.getLatitude(),info.getLongitude());
+            MapStatusUpdate update = MapStatusUpdateFactory.newLatLng(lat);
+            baiduMap.animateMapStatus(update);
+            Toast.makeText(Coach_location.this, info.getCoachName(), Toast.LENGTH_SHORT).show();
+            showPop(marker);
+            return false;
+        }
+    };
+
+
+    // 点击地图事件监听
+    private BaiduMap.OnMapClickListener mapClick = new BaiduMap.OnMapClickListener() {
+        @Override
+        public void onMapClick(LatLng latLng) {
+            baiduMap.hideInfoWindow();
+        }
+
+        @Override
+        public boolean onMapPoiClick(MapPoi mapPoi) {
+            return false;
+        }
+    };
+    // 地图状态更新监听
+    private BaiduMap.OnMapStatusChangeListener mapStatus = new BaiduMap.OnMapStatusChangeListener() {
+        @Override
+        public void onMapStatusChangeStart(MapStatus mapStatus) {
+
+        }
+
+        @Override
+        public void onMapStatusChange(MapStatus mapStatus) {
+
+        }
+
+        @Override
+        public void onMapStatusChangeFinish(MapStatus mapStatus) {
+        }
+    };
+    private LatLng latold;
+    private int addTimes = 0;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.school_on_map);
+        initView();
+        initLocation();
+    }
+
+    //初始化定位信息，定位到用户当前位置
+    private void initLocation() {
+        mLocationClient = new LocationClient(this);
+        myLocationListener = new MyLocationListener();
+        mLocationClient.registerLocationListener(myLocationListener);
+        LocationClientOption option = new LocationClientOption();
+        option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);// 高精度模式：
+        // Battery_Saving:低精度模式
+        option.setCoorType("bd09ll"); //设置坐标系类型
+        option.setOpenGps(true);
+        option.setScanSpan(2000);// 扫描时间间隔  scanSpan - 单位毫秒，当<1000(1s)时，定时定位无效
+        option.setIsNeedAddress(true);// 设置是否需要地址信息，默认为无地址
+        option.setNeedDeviceDirect(true);// 网络定位时，是否需要设备方向
+        mLocationClient.setLocOption(option);
+    }
+
+    private void initView() {
+        mMapView = (MapView) findViewById(R.id.bmapView);
+        baiduMap = mMapView.getMap();
+        Button button_back = (Button) findViewById(R.id.detail_back);
+        button_back.setOnClickListener(this);
+        //地图状态的更新
+        MapStatusUpdate msu = MapStatusUpdateFactory.zoomTo(13.0f);
+        baiduMap.setMapStatus(msu);//设置地图当前显示的缩放级别
+        baiduMap.setMaxAndMinZoomLevel(3.0f, 19.0f);//设置缩放级别
+        baiduMap.setOnMapLongClickListener(longClick);//添加地图长按事件
+        baiduMap.setOnMarkerClickListener(markerClick);
+        baiduMap.setOnMapClickListener(mapClick);
+        baiduMap.setOnMapStatusChangeListener(mapStatus);
+        // 获取定位信息
+        BDLocation loc = MainApplication.getLocation();
+        if (location != null) {
+            LatLng latLng = new LatLng(loc.getLatitude(),loc.getLongitude());
+            MapStatusUpdate location = MapStatusUpdateFactory.newLatLng(latLng);
+            baiduMap.animateMapStatus(location);//使用动画对地图进行更新
+            isFirstIn = false;
+        }
+        //
+        TextView detail_title = (TextView) findViewById(R.id.detail_title);
+        detail_title.setText("找教练");
+
+    }
+
+    //添加覆盖物到地图上面
+    public void addPoiOverLay(List<CoachBrief> list) {
+        addTimes++;
+        if (list != null){
+            baiduMap.clear();//看是否需要在刷新地图数据之前清楚所有数据
+            for (int i = 0; i < list.size(); i++) {
+                CoachBrief obj = list.get(i);
+                LatLng lat = new LatLng(obj.getLatitude(), obj.getLongitude());
+                Log.i("OverLay", obj.getLongitude() + "" + obj.getLatitude() + "");
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("info", (Serializable) list.get(i));
+                MarkerOptions mp = new MarkerOptions();
+                mp.zIndex(20);
+                OverlayOptions option = mp.icon(markerpoi)
+                        .position(lat)
+                        .extraInfo(bundle);
+                baiduMap.addOverlay(option);
+            }
+        }
+
+    }
+
+    public void showPop(Marker marker) {
+        // 创建InfoWindow展示的view
+        Bundle bundle = marker.getExtraInfo();
+        final CoachBrief info = (CoachBrief) bundle.getSerializable("info");
+        View popup = View.inflate(this, R.layout.map_pop, null);
+        TextView title = (TextView) popup.findViewById(R.id.tv_title);
+        TextView content = (TextView) popup.findViewById(R.id.tv_content);
+        title.setText(info.getCoachName());
+        // 定义用于显示该InfoWindow的坐标点
+        LatLng pt = new LatLng(info.getLatitude(), info.getLongitude());
+        // 创建InfoWindow
+        mInfoWindow = new InfoWindow(popup, pt,-50);
+        // 显示InfoWindow
+        baiduMap.showInfoWindow(mInfoWindow);
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        baiduMap.setMyLocationEnabled(true);
+        if (!mLocationClient.isStarted())
+            mLocationClient.start();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //在activity执行onDestroy时执行mMapView.onDestroy()，实现地图生命周期管理
+        mMapView.onDestroy();
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //在activity执行onResume时执行mMapView. onResume ()，实现地图生命周期管理
+        mMapView.onResume();
+    }
+    @Override
+    protected void onPause() {
+        super.onPause();
+        //在activity执行onPause时执行mMapView. onPause ()，实现地图生命周期管理
+        mMapView.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        baiduMap.setMyLocationEnabled(false);
+        if (mLocationClient.isStarted()){
+            mLocationClient.stop();
+        }
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.detail_back:
+                Coach_location.this.finish();
+                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                break;
+        }
+    }
+
+    private class MyLocationListener implements BDLocationListener {
+        @Override
+        public void onReceiveLocation(BDLocation bdLocation) {
+            if (bdLocation == null) {
+                return;
+            }
+            MyLocationData locData = new MyLocationData.Builder()//
+                    .accuracy(bdLocation.getRadius())//
+                    .direction(bdLocation.getDirection())//
+                    .latitude(bdLocation.getLatitude())//
+                    .longitude(bdLocation.getLongitude())//
+                    .build();
+            location = bdLocation;
+
+            baiduMap.setMyLocationConfigeration(new MyLocationConfiguration(
+                    MyLocationConfiguration.LocationMode.NORMAL, true, null));
+            baiduMap.setMyLocationData(locData);//将数据设置给baidumap
+            if (isFirstIn){
+                latold = new LatLng(location.getLatitude(), location.getLongitude());
+                MapStatusUpdate msu = MapStatusUpdateFactory.newLatLng(latold);
+                baiduMap.animateMapStatus(msu);//使用动画对地图进行更新
+                if (latold != null) {
+                    List<CoachBrief> info = Coach.getCoachLocation(location.getLatitude(), location.getLongitude());
+
+                    addPoiOverLay(info);
+                }
+                isFirstIn = false;
+            }
+
+        }
+    }
+}

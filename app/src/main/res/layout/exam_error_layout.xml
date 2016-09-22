@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/main_content"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exam_content"
+            android:textSize="@dimen/text_size_16"
+            android:text="@string/exam_content"
+            android:textColor="@color/black"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <include layout="@layout/single_selection"/>
+            <include layout="@layout/multi_select"/>
+        </FrameLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:text="答案:  "/>
+            <TextView
+                android:id="@+id/right_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_16"
+                android:textColor="@color/blue"
+                android:text="abc"/>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/exam_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_content"
+        android:layout_above="@+id/continue_exam"
+        android:maxHeight="150dp"
+        android:contentDescription="@string/exam_content"
+        />
+    <Button
+        android:id="@+id/continue_exam"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dot_margin_buttom"
+        android:layout_centerHorizontal="true"
+        android:text="继续考试"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:background="@drawable/btn_bg_green"
+        />
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 车辆类型 -->
+    <string-array name="car_type">
+        <item>大型客车－A1</item>
+        <item>牵引车－A2</item>
+        <item>城市公交车－A3</item>
+        <item>中型客车－B1</item>
+        <item>大型货车－B2</item>
+        <item>小型汽车－C1</item>
+        <item>小型自动挡汽车－C2</item>
+    </string-array>
+    <!-- 教练 -->
+    <string-array name="coach">
+        <item>JK0154:戈锋 合格率 100%</item>
+        <item>JK0135:王伟 合格率 88%</item>
+        <item>JK0150:胡承杰 合格率 86%</item>
+        <item>JK0131:张克军　合格率 85%</item>
+        <item>JK0167:赵平 合格率 84%</item>
+        <item>JK0187:钟祥 合格率 84%</item>
+    </string-array>
+</resources>

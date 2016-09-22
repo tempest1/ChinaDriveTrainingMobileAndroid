@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/zhoudi/.gradle/caches/modules-2/files-2.1/com.nostra13.universalimageloader/universal-image-loader/1.8.6/9995ba681982ca129af798c9eb21e79c4bffa45/universal-image-loader-1.8.6.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="09995ba681982ca129af798c9eb21e79c4bffa45">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/universal-image-loader-1.8.6_eb6ee5e0ab5d4e18d2fa5cccc402f681bcd830f8.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/.gradle/caches/modules-2/files-2.1/org.jsoup/jsoup/1.7.2/d7e275ba05aa380ca254f72d0c0ffebaedc3adcf/jsoup-1.7.2.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d7e275ba05aa380ca254f72d0c0ffebaedc3adcf">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/jsoup-1.7.2_a5c78971064f17d4caf1d31d9ded3421cd35c7a6.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/.gradle/caches/modules-2/files-2.1/com.google.zxing/core/3.2.0/e019d15a13a9786f881141d2df6654b8510bce8b/core-3.2.0.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="e019d15a13a9786f881141d2df6654b8510bce8b">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/core-3.2.0_e70d3d610831fd4feb6fa241aa566ac7763a90b6.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/libs/libammsdk.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="11b09244aedaa51bfd09269637be7c32c60da314">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/libammsdk_e58a08c9408947cc537a55f0dc5937f03224cecb.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="a4d95c870d93417fd6a8f31ed03c0efb3404080a">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_b5e9f79521a895238219f02332ef7e840538e3c6.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d677c422db03c4816b288549f7fb08e8a86196c4">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/instant-run_0222c57401ecb671ac1f0a1e0bdd5ddfc887ade2.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1_f354300766c5816c93970b67624d10e31fb88d24.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-22.2.1_369dbd4ef1277cc06a25c98ecffe51ec3ebd217a.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-22.2.1_f59c0e55b58703def88dcf7236974f835c81d012.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1_9290de45feab8cf65fc1872f19ae6c6f7ff95d74.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/libs/BaiduLBS_Android.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="9f145f7ecccfa589acb008ffc20f947f8b6d2074">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/BaiduLBS_Android_24753e699c2dcf6d074053c283d899b3e8b23669.jar" />
+    </item>
+    <item
+        jar="/Users/zhoudi/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/Users/zhoudi/Android/ChinaDriveTrainingMobileAndroid/app/build/intermediates/pre-dexed/debug/gson-2.3_ca3659e4136019670a0b4ed1c44efb66671f5aa4.jar" />
+    </item>
+
+</items>

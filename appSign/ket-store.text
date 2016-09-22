@@ -1,0 +1,32 @@
+new Key Store
+Password :SmartlabYu
+Confirm:smartlab0917
+Alias: 驾培助手
+Password: smartlab2015Yu
+Confirm: smartlab-09-17-14:26
+First and Last Name: DriveLicense
+Organizational Unit: smartlab-411
+Organization: Smart
+City or Locality: 荆州
+State or Province : 湖北省
+Country: CN	//中国国家代码
+
+localhost:~ smartlab$ keytool -genkey -alias michaelkey -keyalg RSA -keysize 1024 -keypass SmartlabYu -validity 7300 -keystore /Users/tianranwang2/Documents/我的文档/Apk签名/michael.keystore -storepass smartlab2015Yu
+您的名字与姓氏是什么?
+  [Unknown]:  Yu
+您的组织单位名称是什么?
+  [Unknown]:  smart   
+您的组织名称是什么?
+  [Unknown]:  smartlab
+您所在的城市或区域名称是什么?
+  [Unknown]:  荆州市  
+您所在的省/市/自治区名称是什么?
+  [Unknown]:  湖北省
+该单位的双字母国家/地区代码是什么?
+  [Unknown]:  CN
+CN=Yu, OU=smart, O=smartlab, L=荆州市, ST=湖北省, C=CN是否正确?
+  [否]:  y
+
+-storepass smartlab2015Yu
+-keypass SmartlabYu
+Password: smartlab0917

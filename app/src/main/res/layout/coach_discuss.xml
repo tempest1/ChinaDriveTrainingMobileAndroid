@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        >
+        <RelativeLayout
+            android:layout_marginTop="@dimen/login_edit_padding"
+            android:background="@color/white"
+            android:layout_below="@+id/km_layout"
+            android:id="@+id/list_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/complain_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/login_edit_padding"
+                android:text="@string/discuss_text"
+                />
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:id="@+id/diacuss_name"
+               android:text="@string/discuss_text"
+               android:layout_alignTop="@+id/complain_title"
+               android:layout_toRightOf="@+id/complain_title"
+               android:layout_toEndOf="@+id/complain_title" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:id="@+id/coachlike"
+                android:text="@string/coachlike"
+                android:padding="10dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/choose_layout"
+            android:layout_below="@+id/list_layout"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_edit_padding">
+            <TextView
+                android:text="@string/choose_type"
+                android:id="@+id/title"
+                android:textColor="@color/black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_edit_padding"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                />
+            <RadioGroup
+                android:id="@+id/choose_radio"
+                android:layout_below="@+id/title"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_edit_padding"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingBottom="@dimen/login_edit_padding">
+                <RadioButton
+                    android:id="@+id/grade_one"
+                    android:text="@string/littleBad"
+                    android:checked="true"
+                    style="@style/test_on"
+                    />
+                <RadioButton
+                    android:id="@+id/grade_two"
+                    android:text="@string/bad"
+                    style="@style/test_on" />
+                <RadioButton
+                    android:id="@+id/grade_three"
+                    android:text="@string/soBad"
+                    style="@style/test_on" />
+                <RadioButton
+                    android:id="@+id/grade_four"
+                    android:text="@string/soBad"
+                    style="@style/test_on"
+                    android:visibility="gone"
+                    />
+            </RadioGroup>
+
+        </RelativeLayout>
+        <com.smartlab.drivetrain.view.EmoticonsEditText
+            android:id="@+id/edit"
+            android:layout_below="@+id/choose_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/img_height"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/login_edit_padding"
+            android:hint="@string/goodOrNot"
+            android:textSize="@dimen/text_size_12"
+            android:padding="@dimen/login_edit_padding"
+            android:gravity="start|top"
+            />
+        <View
+            android:layout_below="@+id/edit"
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/stork_width"
+            android:background="@color/gray"
+            />
+        <Button
+            android:layout_below="@+id/line"
+            android:id="@+id/btn_send"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/commit"
+            android:layout_margin="@dimen/login_edit_padding"
+            android:background="@drawable/btn_bg_green"
+            />
+    </RelativeLayout>
+
+
+</LinearLayout>

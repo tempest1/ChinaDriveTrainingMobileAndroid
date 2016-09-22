@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/check_layout"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingLeft="@dimen/login_edit_padding"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    >
+    <CheckBox
+        android:id="@+id/checkA"
+        style="@style/radio_exam" />
+    <CheckBox
+        android:id="@+id/checkB"
+        style="@style/radio_exam" />
+    <CheckBox
+        android:id="@+id/checkC"
+        style="@style/radio_exam" />
+    <CheckBox
+        android:id="@+id/checkD"
+        style="@style/radio_exam" />
+</LinearLayout>

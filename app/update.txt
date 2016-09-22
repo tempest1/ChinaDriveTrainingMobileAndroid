@@ -1,0 +1,7 @@
+
+{
+    "verCode": 9,
+    "verName": “1.4.5”,
+    "description": “微信登录”,
+    "url": "http://139.129.96.117/appDownload/app-drive-20151221.apk"
+}

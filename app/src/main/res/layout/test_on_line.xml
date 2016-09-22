@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/test_bar"
+        />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/test_bar"
+        >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/exam_content"
+            android:layout_margin="@dimen/login_edit_padding"
+            android:textSize="@dimen/text_size_20"
+            android:text="@string/exam_content"
+            />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <include layout="@layout/single_selection"/>
+                <include layout="@layout/multi_select"/>
+            </FrameLayout>
+        <ImageView
+            android:id="@+id/exam_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="300dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/exam_des"
+            android:layout_gravity="center_horizontal"
+            />
+        <FrameLayout
+            android:id="@+id/video_fram"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:background="@android:color/holo_blue_light"
+            android:visibility="gone"
+            >
+            <com.android.tedcoder.wkvideoplayer.view.SuperVideoPlayer
+                android:id="@+id/video_player"
+                android:layout_width="match_parent"
+                android:layout_height="230dp">
+            </com.android.tedcoder.wkvideoplayer.view.SuperVideoPlayer>
+            <ImageView
+                android:id="@+id/play_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/exam_des"
+                android:src="@drawable/biz_video_list_play_icon_big"/>
+        </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/exan_bottom" />
+    <com.smartlab.drivetrain.view.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_below="@+id/test_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </com.smartlab.drivetrain.view.EmptyLayout>
+</RelativeLayout>

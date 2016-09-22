@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.smartlab.drivetrain.license"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 9
+        versionName "1.4.5"
+    }
+    signingConfigs {
+        myConfig {
+            storeFile file("../appSign/michael.keystore")
+            storePassword "smartlab2015Yu"
+            keyAlias "michaelkey"
+            keyPassword "SmartlabYu"
+        }
+    }
+    buildTypes {
+        debug {
+            debuggable true
+        }
+        release {
+            signingConfig  signingConfigs.myConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:22.2.1'
+    //系统自动生成代码时，默认的是23.0.1，不同版本的sdk对应的support包路径有所不同，会报错
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.8.6'
+    //  html解析库
+    compile 'org.jsoup:jsoup:1.7.2'
+    //  json解析包
+    compile 'com.google.code.gson:gson:2.3'
+    //  二维码
+    compile 'com.google.zxing:core:3.2.0'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile project(':wkvideoplayer')
+    compile files('libs/libammsdk.jar')
+}

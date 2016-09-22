@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/radio_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="5dp"
+    android:background="@color/white"
+    >
+<RadioButton
+    style="@style/radio_type"
+    android:drawableTop="@drawable/buttom_home"
+    android:text="@string/drive_home"
+    android:id="@+id/radio_home"
+    android:checked="true"
+    />
+
+<RadioButton
+    style="@style/radio_type"
+    android:drawableTop="@drawable/buttom_info"
+    android:text="@string/drive_info"
+    android:id="@+id/radio_info" />
+<RadioButton
+    style="@style/radio_type"
+    android:drawableTop="@drawable/buttom_commu"
+    android:text="@string/drive_communicate"
+    android:id="@+id/radio_commuicate"
+    />
+
+<RadioButton
+    style="@style/radio_type"
+    android:drawableTop="@drawable/buttom_me"
+    android:text="@string/drive_mine"
+    android:id="@+id/radio_mine"
+    android:textColor="@color/black"
+    />
+</RadioGroup>
+
+

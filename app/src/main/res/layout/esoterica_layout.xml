@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/esoterica_bg"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="@dimen/content_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/subject_two_"
+                android:text="@string/subject_two_"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/exam_button_width" />
+            <Button
+                android:id="@+id/subject_three_"
+                android:text="@string/subject_three_"
+                android:layout_below="@+id/subject_two_"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/exam_button_width" />
+            <Button
+                android:id="@+id/exam_teach_one"
+                android:text="@string/exam_teach_one"
+                android:layout_below="@+id/subject_three_"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/exam_button_width" />
+            <Button
+                android:id="@+id/subject_two"
+                android:text="@string/exam_two"
+                android:layout_below="@+id/exam_teach_one"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_width="@dimen/exam_button_width"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/subject_three"
+                android:text="@string/exam_three"
+                android:layout_below="@+id/subject_two"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_width="@dimen/exam_button_width"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/exam_teach_four"
+                android:text="@string/exam_teach_four"
+                android:layout_below="@+id/subject_three"
+                android:layout_marginTop="@dimen/activity_horizontal_margin"
+                android:background="@drawable/btn_bg_esoterica"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:layout_width="@dimen/exam_button_width" />
+            <View
+                android:id="@+id/line"
+                android:layout_toLeftOf="@+id/exam_teach_four"
+                android:layout_width="@dimen/top_margin_text"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                android:layout_centerHorizontal="true"
+                />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

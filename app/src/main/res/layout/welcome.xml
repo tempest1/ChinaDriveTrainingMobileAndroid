@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 应用程序启动之后的欢迎界面 -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/welCome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </android.support.v4.view.ViewPager>
+
+    <include
+        layout="@layout/dot"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dip"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/dot_margin_buttom"
+        android:gravity="center"/>
+
+</FrameLayout>

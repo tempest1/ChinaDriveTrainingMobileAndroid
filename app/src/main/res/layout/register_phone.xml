@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/set_password_layout_margin"
+    android:paddingRight="@dimen/set_password_layout_margin"
+    android:paddingTop="@dimen/set_password_layout_margin">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal" >
+        <EditText
+            android:drawableLeft="@mipmap/phone"
+            android:id="@+id/reg_phone_et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/loading_shape"
+            android:hint="@string/phone"
+            android:imeOptions="actionNext"
+            android:padding="@dimen/login_edit_padding"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="@dimen/set_password_layout_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/set_password_layout_margin">
+        <EditText
+            android:id="@+id/edit_msg_code"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:maxLength="6"
+            android:background="@drawable/loading_shape"
+            />
+        <Button
+
+            android:id="@+id/req_msg_code"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_request_code"
+            android:padding="@dimen/btn_login_padding"
+            android:text="获取短信验证码"/>
+    </LinearLayout>
+    <com.smartlab.drivetrain.view.HandyTextView
+        android:id="@+id/reg_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:background="#fffceec3"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:padding="3dip"
+        android:singleLine="true"
+        android:text="186 8134 1780"
+        android:textColor="#fff4a900"
+        android:textSize="35sp"
+        android:visibility="gone"
+        />
+</LinearLayout>

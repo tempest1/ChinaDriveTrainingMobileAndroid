@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/edit_tittle"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginRight="@dimen/login_edit_padding"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="完成"/>
+    </RelativeLayout>
+    <com.smartlab.drivetrain.view.EmoticonsEditText
+        android:id="@+id/edit"
+        android:layout_below="@+id/edit_tittle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/login_edit_padding"
+        android:hint="@string/goodOrNot"
+        android:textSize="@dimen/text_size_12"
+        android:padding="@dimen/login_edit_padding"
+        android:gravity="start|top"
+        />
+</LinearLayout>

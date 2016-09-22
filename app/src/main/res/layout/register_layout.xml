@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <include layout="@layout/title_layout" android:id="@+id/title" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        />
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:flipInterval="1000"
+        android:persistentDrawingCache="animation">
+        <include layout="@layout/register_phone"/>
+        <include layout="@layout/set_password"/>
+    </ViewFlipper>
+
+    <!-- android:background="@mipmap/zhuce_1"-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:layout_marginTop="@dimen/login_margin"
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/next_step"
+            android:padding="@dimen/btn_login_padding"
+            android:background="@drawable/btn_bg_green"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            />
+        <Button
+            android:layout_marginTop="@dimen/login_margin"
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/next_step"
+            android:padding="@dimen/btn_login_padding"
+            android:background="@drawable/btn_bg_green"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffffff</color>
+    <color name="griditems_bg">#ffe8ecef</color>
+    <color name="commo_text_color">#66333333</color>
+    <color name="line">#ffd3dde6</color>
+    <color name="silvery_grey">#ededed</color>
+    <color name="black">#cc000000</color><!--黑色 -->
+    <color name="gray">#aa333333</color>
+    <color name="linght_gray">#55aaaaaa</color>
+    <color name="light_blue">#666593cb</color>
+    <color name="green">#33aadf33</color>
+    <color name="red">#aaff0000</color>
+    <color name="text_color">#ff434343</color>
+    <color name="blue">#ff4c9eee</color>
+    <color name="register_high_blue">#ff3608d9</color>
+    <color name="detail_activity_bg_color">#fff6f7f7</color>
+    <color name="detail_title_text_color">#ff999999</color>
+    <color name="detail_divider_day">#ffb4b4b4</color>
+    <item name="toolbar_bg" type="color">@color/activity_bg_color</item>
+    <color name="activity_bg_color">#fff5f5f5</color>
+    <color name="action_comment_bg">#ffcc3131</color>
+    <item name="action_comment_text" type="color">@color/white</item>
+    <color name="transparent">#00000000</color>
+    <color name="msg_emote_divider">#ffa1a1a1</color>
+    <color name="msg_emotebar_backgroud">#ff73797d</color>
+    <color name="light_notes_color">#ff999999</color>
+    <color name="msg_emotebar_item_selected">#ffececec</color>
+    <color name="msg_emotebar_item_press">#ff3b3e40</color>
+    <color name="cancel">#f7262828</color>
+    <color name="msg_editor_backgroud">#ffececec</color>
+    <color name="exam_two_normal">#bf6655ee</color>
+    <color name="test_bottom">@color/exam_two_normal</color>
+    <color name="exam_two_press">#bf270fe7</color>
+    <color name="day_layout_bg_normal">#f6f6f6</color>
+    <color name="divider_color">#11000000</color>
+    <color name="greeny">#ff11aca6</color>
+    <color name="orange">#f9a907</color>
+    <color name="dark_orange">#e7ff6f00</color>
+    <color name="updatecoler">#fb5939</color>
+    <color name="round_corner_filter_green">#ff66ccff</color>
+    <color name="welcome_backgroud">#ff117aa7</color>
+    <color name="link_color_normal">#FFdd53ef</color>
+    <color name="link_color_press">#FFBA33CC</color>
+    <color name="text_color_line_normal">#ff4977fd</color>
+    <color name="avatar_border">#ff92a3aa</color>
+    <color name="grey_btn_off_end_gradient">#ffaaaaaa</color>
+    <color name="grey_btn_on_start_gradient">#ff106080</color>
+    <color name="grey_btn_on_end_gradient">#ff1d87b1</color>
+    <color name="register_light_blue">#ff6f97ff</color>
+
+    <color name="light_green">#34e434</color>
+
+    <color name="hi_green">#dc228b22</color>
+
+    <color name="hign_green">#04b102</color>
+    <color name="gender_male">#ff65b1ea</color>
+    <color name="post_btn_send_normal">#ff56abe4</color>
+    <color name="post_btn_send_press">#FF478EBE</color>
+    <color name="phone">#ff888271</color>
+    <color name="image_checked_bg">#66000000</color>
+    <color name="exam_one_normal">#e76886</color>
+    <color name="exam_one_press">#FFCA526E</color>
+    <color name="esoterica_bg">#32B397</color>
+    <color name="exam_four_normal">#3fab3b</color>
+    <color name="exam_four_press">#FF349430</color>
+    <color name="little_white_normal">#3affffff</color>
+    <color name="little_white_press">#8affffff</color>
+    <color name="dark_gray">#ffcccccc</color>
+    <color name="exam_error_normal">#1dacf9</color>
+    <color name="exam_error_press">#FF168AC9</color>
+    <color name="weixing">#feeeee</color>
+    <color name="weixings">#f3c2c2</color>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@mipmap/kemu_bg"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"
+        android:id="@+id/title_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        />
+    <ScrollView
+        android:layout_below="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/activity_horizontal_margin"
+        >
+        <Button
+            android:id="@+id/subject_one"
+            android:text="@string/exam_one"
+            android:drawableLeft="@drawable/exam_four"
+            android:background="@drawable/kemuyi_btn"
+            style="@style/choose_exam_btn"
+            />
+        <Button
+            android:id="@+id/subject_four"
+            android:text="@string/exam_four"
+            android:drawableLeft="@drawable/exam_one"
+            android:background="@drawable/kemusi_btn"
+            style="@style/choose_exam_btn"
+            />
+        <Button
+            android:id="@+id/error_one"
+            android:text="@string/exam_error_one"
+            android:drawableLeft="@drawable/error_exam"
+            android:background="@drawable/btn_bg_error_one"
+            style="@style/choose_exam_btn"
+            />
+        <Button
+            android:id="@+id/error_four"
+            android:text="@string/exam_error_four"
+            android:drawableLeft="@drawable/error_exam"
+            android:background="@drawable/btn_error_exam_bg"
+            style="@style/choose_exam_btn"
+            />
+
+    </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/test_bottom"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:gravity="center_horizontal"
+    android:layout_height="55dip"
+    android:background="@color/test_bottom"
+    >
+    <Button
+        android:id="@+id/page_up"
+        style="@style/test_on_line"
+        android:text="上一题"
+        android:drawableTop="@drawable/ic_previous"
+        />
+    <Button
+        android:id="@+id/commit"
+        style="@style/test_on_line"
+        android:drawableTop="@drawable/ic_finish"
+        android:text="交卷"
+        />
+    <Chronometer
+        android:id="@+id/last_time"
+        style="@style/test_on_line"
+        android:drawableTop="@mipmap/ic_time"
+        />
+    <Button
+        android:id="@+id/page_down"
+        style="@style/test_on_line"
+        android:drawableTop="@drawable/ic_next"
+        android:text="下一题"
+        />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/title_layout"/>
+    <RadioGroup
+        android:id="@+id/radio_pay"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/allplay"
+            style="@style/period_pay"
+            android:background="@drawable/bg_period_left"
+            android:checked="true"
+            android:gravity="center_horizontal"
+            android:text="@string/all_pay"
+            />
+        <RadioButton
+            android:id="@+id/period"
+            style="@style/period_pay"
+            android:background="@drawable/bg_period_right"
+            android:text="@string/period_pay"/>
+    </RadioGroup>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:background="@color/linght_gray"/>
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include layout="@layout/all_pay"/>
+        <include layout="@layout/peroid_pay"/>
+    </ViewFlipper>
+</LinearLayout>
